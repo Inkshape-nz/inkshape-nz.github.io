@@ -4,6 +4,8 @@
   "description": "inkshape homepage",
   "main": "index.js",
   "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --config eleventy.config.js --serve --port 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
