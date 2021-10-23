@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('CNAME');
+  eleventyConfig.addWatchTarget("./src/sass/");
 
   return {
     dir: {

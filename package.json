@@ -2,11 +2,15 @@
   "name": "inkshape",
   "version": "1.0.0",
   "description": "inkshape homepage",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "build": "eleventy --config eleventy.config.js",
-    "start": "eleventy --config eleventy.config.js --serve --port 8080",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:sass": "sass  --no-source-map --watch src/sass:dist/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass  --no-source-map src/sass:dist/css",
+    "build:eleventy": "eleventy",
+    "postbuild": "postcss dist/css/*.css -u autoprefixer cssnano -r --no-map",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:sass build:eleventy"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,13 @@
   },
   "homepage": "https://github.com/Inkshape-nz/inkshape-nz.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.3.1",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.7",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.37.5"
   }
 }
