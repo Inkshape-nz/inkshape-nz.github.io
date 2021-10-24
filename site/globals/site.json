@@ -1,0 +1,19 @@
+{
+    "name": "Inkshape",
+    "url": "https://www.inkshape.co.nz",
+    "author": {
+        "name": "",
+        "handle": ""
+    },
+    "images": {
+        "favicon": "/favicon.png",
+        "favicon_svg": "/favicon.svg",
+        "apple_touch_icon": "/images/meta/apple-touch-icon.png",
+        "twitter": "/images/meta/twitter.jpg",
+        "og": "/images/meta/og.jpg"
+    },
+    "social_links": {
+        "github": "",
+        "twitter": ""
+    }
+}

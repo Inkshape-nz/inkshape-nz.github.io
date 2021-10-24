@@ -2,34 +2,25 @@
   "name": "inkshape",
   "version": "1.0.0",
   "description": "inkshape homepage",
-  "main": "index.html",
   "scripts": {
-    "watch:sass": "sass  --no-source-map --watch src/sass:dist/css",
-    "watch:eleventy": "eleventy --serve",
-    "build:sass": "sass  --no-source-map src/sass:dist/css",
-    "build:eleventy": "eleventy",
-    "postbuild": "postcss dist/css/*.css -u autoprefixer cssnano -r --no-map",
-    "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy"
+    "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve --quiet & mix watch",
+    "production": "mix --production & npx @11ty/eleventy --config=eleventy.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Inkshape-nz/inkshape-nz.github.io.git"
   },
-  "author": "",
+  "author": "Inkshape",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Inkshape-nz/inkshape-nz.github.io/issues"
-  },
-  "homepage": "https://github.com/Inkshape-nz/inkshape-nz.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "autoprefixer": "^10.3.1",
-    "cross-env": "^7.0.3",
-    "cssnano": "^5.0.7",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1",
-    "sass": "^1.37.5"
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "gorko": "^0.2.3",
+    "html-minifier": "^4.0.0",
+    "laravel-mix": "^6.0.11",
+    "laravel-mix-purgecss": "^6.0.0",
+    "postcss": "^8.2.6",
+    "resolve-url-loader": "^3.1.2",
+    "sass-loader": "^11.0.1"
   }
 }
