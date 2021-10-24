@@ -1,17 +1,17 @@
 {
-  "name": "skeleventy",
-  "version": "2.0.0",
-  "description": "Skeleventy - A skeleton boilerplate built with Eleventy",
+  "name": "inkshape",
+  "version": "1.0.0",
+  "description": "inkshape homepage",
   "scripts": {
     "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npx @11ty/eleventy --config=eleventy.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/josephdyer/skeleventy.git"
+    "url": "git+https://github.com/Inkshape-nz/inkshape-nz.github.io.git"
   },
-  "author": "Joseph Dyer",
-  "license": "MIT",
+  "author": "Inkshape",
+  "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "html-minifier": "^4.0.0",
