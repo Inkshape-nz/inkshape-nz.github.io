@@ -1,19 +1,33 @@
 {
-    "name": "Inkshape",
-    "url": "https://www.inkshape.co.nz",
-    "author": {
-        "name": "",
-        "handle": ""
-    },
-    "images": {
-        "favicon": "/favicon.png",
-        "favicon_svg": "/favicon.svg",
-        "apple_touch_icon": "/images/meta/apple-touch-icon.png",
-        "twitter": "/images/meta/twitter.jpg",
-        "og": "/images/meta/og.jpg"
-    },
-    "social_links": {
-        "github": "",
-        "twitter": ""
-    }
+  "name": "Inkshape",
+  "url": "https://www.inkshape.co.nz",
+  "author": {
+    "name": "",
+    "email": "",
+    "handle": "",
+    "avatar": "/images/blog/author.jpg"
+  },
+  "images": {
+    "logo": "/images/logo/logo.svg",
+    "favicon": "/images/favicon.ico",
+    "twitter": "/images/meta/twitter.jpg",
+    "og": "/images/meta/og.jpg"
+  },
+  "social_links": {
+    "facebook": "",
+    "twitter": "",
+    "linkedin": ""
+  },
+  "address": {
+    "street": "",
+    "street_2": "",
+    "city": "",
+    "postcode": "",
+    "country": ""
+  },
+  "contact": {
+    "phone": "",
+    "mobile": "",
+    "email": ""
+  }
 }

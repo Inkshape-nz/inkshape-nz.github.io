@@ -5,7 +5,7 @@ const MobileNav = function MobileNav()
 
     $$.mobileNavToggle.addEventListener('click', function() {
 
-        this.classList.toggle('expanded')
+        this.classList.toggle('menu-toggle-active')
         $$.mobileNav.classList.toggle('menu-visible')
 
         // set aria-expanded attribute on menu toggle button
