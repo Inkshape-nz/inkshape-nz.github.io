@@ -1,17 +1,17 @@
 {
-  "name": "skeleventy",
-  "version": "3.0.0",
-  "description": "Skeleventy gives you a rock solid foundation to build fast and accessible static websites",
+  "name": "inkshape",
+  "version": "1.0.0",
+  "description": "inkshape homepage",
   "scripts": {
     "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve --quiet & mix watch",
     "production": "mix --production & npx @11ty/eleventy --config=eleventy.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/josephdyer/skeleventy.git"
+    "url": "git+https://github.com/Inkshape-nz/inkshape-nz.github.io.git"
   },
-  "author": "Joe Dyer",
-  "license": "MIT",
+  "author": "Inkshape",
+  "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-navigation": "^0.1.6",
