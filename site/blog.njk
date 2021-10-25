@@ -3,14 +3,14 @@ layout: default
 meta_title: Blog
 meta_description: Blog page description
 body_class: blog
-title: The Blog
+title: Designs
 ---
 
 <main id="main" class="main inner flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
 
     <section id="container-centre" class="column centre flex-1" aria-label="Blogs">
 
-        <h1 class="page-title text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl">{{ title }}</h1>
+        <h1 class="page-title text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-5xl" style="margin-bottom: 30px">{{ title }}</h1>
 
         <div class="posts lg:flex flex-1">
 
@@ -62,13 +62,13 @@ title: The Blog
 
                         <div class="text-sm text-gray-600 md:flex mb-4">
 
-                            <p class="author">By {{ site.author.name }}</p>
+                            <p class="author">Acrylic & Spray Painting</p>
 
-                            <p class="hidden md:block px-2">—</p>
+                            {# <p class="hidden md:block px-2">—</p> #}
 
-                            <time datetime="{{ post.date }}">
+                            {# <time datetime="{{ post.date }}">
                                 {{ post.date | dateDisplay }}
-                            </time>
+                            </time> #}
 
                         </div>
 

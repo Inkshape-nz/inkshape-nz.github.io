@@ -1,61 +1,180 @@
 <!doctype html>
 <html lang="en" class="min-h-full antialiased">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}</title>
+    <title>
+      {% if meta_title %}
+        {{ meta_title }}
+      {% else %}
+        {{ title }}
+      {% endif %}
+      | {{ site.name }}</title>
     <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
     {% if page.fileSlug === 'blog' %}
-        <meta name="robots" content="noindex,follow" />
+      <meta name="robots" content="noindex,follow"/>
     {% else %}
-        <meta name="robots" content="index,follow" />
+      <meta name="robots" content="index,follow"/>
     {% endif %}
-
     {# if your site's entire CSS comes in under 14kb, you may want to inline in the head #}
     {# include main.css if in development mode #}
     {% if helpers.environment === "development" %}
-        <link rel="stylesheet" href="/css/main.css">
+      <link rel="stylesheet" href="/css/main.css">
     {% else %}
-        {# else, use the minified css file for production #}
-        <link rel="stylesheet" href="/css/main.min.css">
+      {# else, use the minified css file for production #}
+      <link rel="stylesheet" href="/css/main.min.css">
     {% endif %}
-
     {# include scripts #}
     {% if helpers.environment === "development" %}
-        <script src="/js/main.js" defer></script>
+      <script src="/js/main.js" defer></script>
     {% else %}
-        <script src="/js/main.min.js" defer></script>
+      <script src="/js/main.min.js" defer></script>
     {% endif %}
-
     {# include social meta tags #}
     {% include "components/social-meta.njk" %}
-
     {# include static assets e.g. favicon, fonts etc #}
-    <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
-
-    {# canonical #}
+    <link
+    rel="icon" type="image/png" href="{{ site.images.favicon }}"> {# canonical #}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-</head>
-
-<body {% if body_class %} id="{{ body_class }}"{% endif %} class="text-purple-900 leading-normal text-lg">
-
+  </head>
+  <body {% if body_class %} id="{{ body_class }}" {% endif %} class="text-purple-900 leading-normal text-lg">
     <a class="sr-only" href="#main">Skip to content</a>
-
-    <div id="wrapper" class="wrapper pb-16 md:pb-0 flex flex-col relative min-h-screen">
-
-        {# include header #}
-        {% include "components/header.njk" %}
-
-        {# include content #}
-        {{ content | safe }}
-
-        {# include footer #}
-        {% include "components/footer.njk" %}
-
+    <div
+      id="wrapper" class="wrapper pb-16 md:pb-0 flex flex-col relative min-h-screen">
+      {# include header #}
+      {% include "components/header.njk" %}
+      {# include content #}
+      {{ content | safe }}
+      {# include footer #}
+      {% include "components/footer.njk" %}
     </div>
-
     {# include mobile nav #}
     {% include "components/mobile-nav.njk" %}
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+  <style>
+    * {
+      box-sizing: border-box
+    }
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active,
+    .dot:hover {
 
-</body>
+    }
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+      to {
+        opacity: 1
+      }
+    }
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+      to {
+        opacity: 1
+      }
+    }
+  </style>
 </html>

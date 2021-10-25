@@ -1,15 +1,15 @@
 {
     "main": [
         {
-            "label": "Home",
-            "url": "/"
+        "label": "Home",
+        "url": "/"
         },
         {
             "label": "About",
             "url": "/about/"
         },
         {
-            "label": "Blog",
+            "label": "Designs",
             "url": "/blog/"
         },
         {

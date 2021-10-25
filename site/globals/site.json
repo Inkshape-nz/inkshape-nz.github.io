@@ -11,7 +11,11 @@
     "logo": "/images/logo/logo.svg",
     "favicon": "/images/favicon.ico",
     "twitter": "/images/meta/twitter.jpg",
-    "og": "/images/meta/og.jpg"
+    "og": "/images/meta/og.jpg",
+    "slide1": "/images/slide/slide1.jpg",
+    "slide2": "/images/slide/slide2.png",
+    "slide3": "/images/slide/slide3.png"
+
   },
   "social_links": {
     "facebook": "",
